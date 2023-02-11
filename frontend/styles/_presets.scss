@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+$white: #F1FAEE;
+$blue:#A8DADC;
+$dark: #040B13;
+
+html {
+  font-size: 62.5%; // 10px
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: 62.5em) {
+    // tab-landscape
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: 56.25em) {
+    // tab-portrait
+    font-size: 54%;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    // phone
+    font-size: 51%;
+  }
+
+  @media only screen and (min-width: 112.5em) {
+    // big desktop
+    font-size: 75%; // 1rem = 12px, 12/16 = 75
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  // background-color: $light-pink-variant;
+}
+
+a {
+  text-decoration: none;
+   color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+// scroll bar
+/* width */
+::-webkit-scrollbar {
+  background-color: $blue;
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: $blue;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient($blue, $white);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: $blue;
+}
