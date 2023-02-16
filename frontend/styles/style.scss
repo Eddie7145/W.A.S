@@ -33,7 +33,9 @@ $light-ash: #c3c9c9;
   img {
     padding-left: 2rem;
   }
-
+  .fa-bars::before{
+    font-size: 3rem;
+  }
   .links {
     display: flex;
     font-size: 1rem;
@@ -48,8 +50,10 @@ $light-ash: #c3c9c9;
       text-shadow: 0px 0px 0px $dark;
       position: relative;
       cursor: pointer;
+      transition: .3s ease-in;
       &:hover {
         color: $white;
+        text-shadow: 2px 3px 2px $blue-variant;
       }
     }
     .active {
@@ -76,7 +80,13 @@ $light-ash: #c3c9c9;
     font-size: 1.5rem;
     font-weight: 500;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transition: 0.3s ease;
+    transition: 0.3s ease-in;
+    &:hover{
+      background: $blue-accent;
+      color: $dark;
+      text-shadow: 2px 2px 2px $light-ash;
+      font-weight: 700;
+    }
   }
 }
 .hero {
@@ -421,6 +431,12 @@ $light-ash: #c3c9c9;
       a {
         margin-bottom: 0.5rem;
         font-weight: bold;
+        transition: .5s ease-in;
+        &:hover{
+          color: $blue-variant;
+          text-decoration: underline;
+          text-decoration-color: $blue-variant;
+        }
       }
     }
   }
@@ -463,6 +479,15 @@ $light-ash: #c3c9c9;
 
       &:last-child {
         margin-right: 0rem;
+      }
+
+      i{
+        transition: 0.4s ease-in;
+        &:hover{
+          color: $white;
+          transform: scale(200%);
+          text-shadow: -2px -2px 10px $blue-variant;
+        }
       }
     }
   }
@@ -570,7 +595,8 @@ $light-ash: #c3c9c9;
         border: 1.2rem solid $white;
         img {
           width: 100%;
-          height: auto;
+          min-height: -webkit-fill-available;
+          object-fit: cover;
         }
       }
     }
@@ -994,67 +1020,67 @@ $light-ash: #c3c9c9;
   }
 }
 // // menu
-// .menu_overlay {
-//   display: flex;
-//   position: absolute;
-//   top: 0px;
-//   left: 0px;
-//   height: 100vh;
-//   width: 0vw;
-//   background-color: $blue-accent;
-//   transition: ease-in-out 0.5s;
-//   z-index: 100000;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   overflow: hidden;
-//   color: white;
-//   i {
-//     position: absolute;
-//     top: 4rem;
-//     right: 4rem;
-//     font-size: 3rem;
-//   }
-//   a > li {
-//     font-size: 3rem;
-//     margin-bottom: 3rem;
-//     text-shadow: 1px 1px 4px $blue;
-//     position: relative;
-//   }
-//   .active {
-//     text-shadow: 0px 0px 0px $blue;
-//     &::after {
-//       position: absolute;
-//       content: "💕";
-//       top: -1.5rem;
-//       right: -4rem;
-//     }
-//   }
-//   .donate_btn {
-//     background-color: $blue;
-//     appearance: none;
-//     border: none;
-//     outline: none;
-//     padding: 2rem;
-//     font-family: "Poppins";
-//     border-radius: 0.5rem;
-//     letter-spacing: 0.05em;
-//     color: white;
-//     min-width: fit-content;
-//     font-size: 2rem;
-//     font-weight: 700;
-//     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-//     transition: 0.3s ease;
-//     &:hover {
-//       background-color: $blue;
-//       color: $blue;
-//       font-weight: 700;
-//       font-size: 1.5rem;
-//       box-shadow: $blue 0px 1px 5px;
-//     }
-//   }
-// }
-// .menu_open {
-//   height: 100vh;
-//   width: 100vw;
-// }
+.menu_overlay {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 0vw;
+  background-color: $blue-accent;
+  transition: ease-in-out 0.5s;
+  z-index: 100000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: $dark;
+  i {
+    position: absolute;
+    top: 3.5rem;
+    right: 2.3rem;
+    font-size: 3rem;
+  }
+  a > li {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 4px $blue;
+    position: relative;
+  }
+  .active {
+    text-shadow: 0px 0px 0px $blue;
+    &::after {
+      position: absolute;
+      content: "👨‍👦‍👦";
+      top: -1.5rem;
+      right: -4rem;
+    }
+  }
+  .donate_btn {
+    background-color: $blue;
+    appearance: none;
+    border: none;
+    outline: none;
+    padding: 2rem;
+    font-family: "Poppins";
+    border-radius: 0.5rem;
+    letter-spacing: 0.05em;
+    color: white;
+    min-width: fit-content;
+    font-size: 2rem;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.3s ease;
+    &:hover {
+      background-color: $blue;
+      color: $blue;
+      font-weight: 700;
+      font-size: 1.5rem;
+      box-shadow: $blue 0px 1px 5px;
+    }
+  }
+}
+.menu_open {
+  height: 100vh;
+  width: 100vw;
+}
